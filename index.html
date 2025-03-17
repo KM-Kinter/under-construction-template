@@ -13,7 +13,7 @@
         }
 
         body {
-            background: #111111;
+            background: #111;
             height: 100vh;
             display: flex;
             align-items: center;
@@ -24,21 +24,21 @@
 
         .construction-overlay {
             position: absolute;
-            width: 100%;
-            height: 100%;
+            width: 300%;
+            height: 300%;
             background: repeating-linear-gradient(
                 45deg,
-                rgba(255, 80, 0, 0.1),
-                rgba(255, 80, 0, 0.1) 50px,
+                rgba(255, 80, 0, 0.15),
+                rgba(255, 80, 0, 0.15) 50px,
                 transparent 50px,
                 transparent 100px
             );
-            animation: slide 40s linear infinite;
+            animation: slide 10s linear infinite;
         }
 
         @keyframes slide {
-            0% { background-position: 0 0; }
-            100% { background-position: 2000px 0; }
+            from { transform: translateX(0) translateY(0); }
+            to { transform: translateX(-200px) translateY(-200px); }
         }
 
         .container {
@@ -67,18 +67,6 @@
         @keyframes textGlow {
             0% { text-shadow: 0 0 10px rgba(255, 85, 0, 0.3); }
             100% { text-shadow: 0 0 25px rgba(255, 85, 0, 0.7); }
-        }
-
-        .construction-icon {
-            width: 100px;
-            height: 100px;
-            margin: 20px auto;
-            animation: rotate 8s linear infinite;
-        }
-
-        @keyframes rotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
         }
 
         .progress-bar {

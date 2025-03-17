@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under construction</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        body {
+            background: #111111;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .construction-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                45deg,
+                rgba(255, 80, 0, 0.1),
+                rgba(255, 80, 0, 0.1) 50px,
+                transparent 50px,
+                transparent 100px
+            );
+            animation: slide 40s linear infinite;
+        }
+
+        @keyframes slide {
+            0% { background-position: 0 0; }
+            100% { background-position: 2000px 0; }
+        }
+
+        .container {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            padding: 40px;
+            border: 4px solid #FF5500;
+            background: rgba(0, 0, 0, 0.95);
+            box-shadow: 0 0 50px rgba(255, 85, 0, 0.3);
+            max-width: 800px;
+            width: 90%;
+        }
+
+        h1 {
+            color: #FF5500;
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            margin: 20px 0;
+            font-weight: 700;
+            text-shadow: 0 0 15px rgba(255, 85, 0, 0.5);
+            animation: textGlow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes textGlow {
+            0% { text-shadow: 0 0 10px rgba(255, 85, 0, 0.3); }
+            100% { text-shadow: 0 0 25px rgba(255, 85, 0, 0.7); }
+        }
+
+        .construction-icon {
+            width: 100px;
+            height: 100px;
+            margin: 20px auto;
+            animation: rotate 8s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .progress-bar {
+            height: 4px;
+            background: rgba(255, 85, 0, 0.3);
+            margin: 30px auto;
+            width: 60%;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .progress {
+            height: 100%;
+            width: 45%;
+            background: lightgreen;
+            animation: progress 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes progress {
+            0% { width: 30%; }
+            100% { width: 70%; }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+                letter-spacing: 3px;
+            }
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="construction-overlay"></div>
+    <div class="container">
+        <h1>PAGE UNDER CONSTRUCTION</h1>
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+        <h1 style="font-size: 2.2rem; letter-spacing: 2px;">
+            <span style="color: #FFF">We are changing</span><br>
+            <span style="color: #FF5500">for YOU</span>
+        </h1>
+    </div>
+</body>
+</html>
